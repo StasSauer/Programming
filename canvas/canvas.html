@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+</head>
+
+<body>
+    <canvas style="border: 1px dotted green" id="canvas"> данный брайзер не поддерживает Canvas </canvas>
+    <script>
+        var canv = document.getElementById('canvas');
+        var ct = canv.getContext('2d');
+        canv.width = 640;
+        canv.height = 480;
+        ct.moveTo(100, 200);
+        ct.lineTo(300, 400);
+        ct.lineWidth=10;
+        ct.strokeStyle="#c0c";
+        ct.lineCap="round";
+        ct.lineTo(300, 0);
+       // ct.stroke();
+        ct.fillStyle = "blue";
+        ct.fill();
+        ct.closePath();
+        ct.stroke();
+    </script>
+</body>
+
+</html>
